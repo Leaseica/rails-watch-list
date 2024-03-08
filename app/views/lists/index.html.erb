@@ -1,0 +1,13 @@
+<%# app/views/lists/index.html.erb %>
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>Save any kind of movies</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+
+<% @lists.each do |list| %>
+  <%= link_to list.name, list_path(list) %>
+<% end %>
+
+<%= link_to 'create a new list', new_list_path(@list) %>
